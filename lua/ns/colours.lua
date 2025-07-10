@@ -38,9 +38,8 @@ local M = {}
 
 ---@type PaletteBackgrounds
 local background = {
-
   bg_dim = "#062625",
-  bg0 = "#272e33",
+  bg0 = "#062625",
   bg1 = "#2e383c",
   bg2 = "#374145",
   bg3 = "#414b50",
