@@ -40,16 +40,16 @@ local M = {}
 local background = {
   bg_dim = "#062625",
   bg0 = "#062625",
-  bg1 = "#2e383c",
-  bg2 = "#374145",
-  bg3 = "#414b50",
-  bg4 = "#495156",
-  bg5 = "#4f5b58",
-  bg_visual = "#4c3743",
-  bg_red = "#493b40",
-  bg_green = "#3c4841",
-  bg_blue = "#384b55",
-  bg_yellow = "#45443c",
+  bg1 = "#062625",
+  bg2 = "#062625",
+  bg3 = "#062625",
+  bg4 = "#062625",
+  bg5 = "#062625",
+  bg_visual = "#062625",
+  bg_red = "#062625",
+  bg_green = "#062625",
+  bg_blue = "#062625",
+  bg_yellow = "#062625",
 }
 
 ---@type table<Backgrounds, PaletteBase>
