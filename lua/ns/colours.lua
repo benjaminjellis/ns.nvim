@@ -56,16 +56,21 @@ local background = {
 local base_palette = {
   fg = "#d0b892",
   red = "#F92672",
-
-  orange = "#e69875",
-  yellow = "#dbbc7f",
-  green = "#a7c080",
+  orange = "#FD971F",
+  yellow = "#E6DB74",
+  green = "#A6E22E",
+  -- not update
   aqua = "#83c092",
-  blue = "#7fbbb3",
-  purple = "#d699b6",
+  blue = "#66D9EF",
+  purple = "#AE81FF",
+
+  -- not update
   grey0 = "#7a8478",
+  -- not update
   grey1 = "#859289",
+  -- not update
   grey2 = "#9da9a0",
+
   statusline1 = "#d3b58e",
   statusline2 = "#A6E22E",
   statusline3 = "#66D9EF",
