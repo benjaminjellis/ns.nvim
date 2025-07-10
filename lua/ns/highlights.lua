@@ -509,7 +509,7 @@ highlights.generate_syntax = function(palette, options)
     TSTypeQualifier = { link = "Delimiter" },
     TSURI = syntax_entry(palette.blue, palette.none, { styles.underline }),
     TSVariable = { link = "Fg" },
-    TSVariableBuiltin = { link = "PurpleItalic" },
+    TSVariableBuiltin = { link = "Orange" },
 
     javascriptTSInclude = { link = "Purple" },
     typescriptTSInclude = { link = "Purple" },
