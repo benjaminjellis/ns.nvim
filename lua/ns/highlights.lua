@@ -500,9 +500,9 @@ highlights.generate_syntax = function(palette, options)
     TSTitle = { link = "Title" },
     TSTodo = { link = "Todo" },
     TSType = { link = "Type" },
-    TSTypeBuiltin = { link = "YellowItalic" },
-    TSTypeDefinition = { link = "YellowItalic" },
-    TSTypeQualifier = { link = "Orange" },
+    TSTypeBuiltin = { link = "Type" },
+    TSTypeDefinition = { link = "Type" },
+    TSTypeQualifier = { link = "Delimiter" },
     TSURI = syntax_entry(palette.blue, palette.none, { styles.underline }),
     TSVariable = { link = "Fg" },
     TSVariableBuiltin = { link = "PurpleItalic" },
@@ -1986,7 +1986,7 @@ highlights.generate_syntax = function(palette, options)
     javaScriptMember = { link = "Aqua" },
 
     -- Python
-    pythonBuiltin = { link = "Yellow" },
+    pythonBuiltin = { link = "Type" },
     pythonExceptions = { link = "Purple" },
     pythonDecoratorName = { link = "Blue" },
 
