@@ -139,6 +139,7 @@ highlights.generate_syntax = function(palette, options)
     Function = syntax_entry(palette.fg, palette.none),
     Type = syntax_entry(palette.light_green, palette.none),
     Delimiter = syntax_entry(palette.white, palette.none),
+    Keyword = syntax_entry(palette.blue, palette.none),
 
     ColorColumn = syntax_entry(palette.none, palette.bg1),
     Conceal = syntax_entry(set_colour_based_on_ui_contrast(palette.bg5, palette.grey0), palette.none),
@@ -334,7 +335,6 @@ highlights.generate_syntax = function(palette, options)
     Define = syntax_entry(palette.purple, palette.none, optional_italics),
     Conditional = syntax_entry(palette.red, palette.none, optional_italics),
     Repeat = syntax_entry(palette.red, palette.none, optional_italics),
-    Keyword = syntax_entry(palette.red, palette.none, optional_italics),
     Typedef = { link = "Type" },
     Exception = syntax_entry(palette.red, palette.none, optional_italics),
     Statement = syntax_entry(palette.red, palette.none, optional_italics),
@@ -462,7 +462,7 @@ highlights.generate_syntax = function(palette, options)
     TSFunction = { link = "Function" },
     TSFunctionCall = { link = "Function" },
     TSInclude = { link = "Red" },
-    TSKeyword = { link = "Red" },
+    TSKeyword = { link = "" },
     TSKeywordFunction = { link = "Red" },
     TSKeywordOperator = { link = "Orange" },
     TSKeywordReturn = { link = "Red" },
@@ -703,6 +703,7 @@ highlights.generate_syntax = function(palette, options)
 
     -- New Treesitter highlights (ust specific)
     ["@variable.parameter.rust"] = syntax_entry(palette.fg, palette.none, { styles.italic }),
+    ["@lsp.mod.associated.rust"] = syntax_entry(palette.fg, palette.none, { styles.italic }),
 
     -- LSP Semantic token highlights
     ["@lsp.type.boolean"] = { link = "@boolean" },
