@@ -139,8 +139,8 @@ highlights.generate_syntax = function(palette, options)
     -- Semantic Highlights
     Function = syntax_entry(palette.fg, palette.none),
     Type = syntax_entry(palette.light_green, palette.none),
-    Delimiter = { links = "White" },
-    Keyword = { links = "White" },
+    Delimiter = { link = "White" },
+    Keyword = { link = "White" },
 
     ColorColumn = syntax_entry(palette.none, palette.bg1),
     Conceal = syntax_entry(set_colour_based_on_ui_contrast(palette.bg5, palette.grey0), palette.none),
