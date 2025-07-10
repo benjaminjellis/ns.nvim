@@ -84,7 +84,7 @@ highlights.generate_syntax = function(palette, options)
   ---@return string
   local function sign_column_respecting_colour(colour_to_set)
     if options.sign_column_background == "none" then
-      return palette.none
+      return palette.no
     else
       return colour_to_set
     end
@@ -100,6 +100,11 @@ highlights.generate_syntax = function(palette, options)
 
   ---@type Highlights
   local syntax = {
+    -- Semantic Highlights
+    Function = syntax_entry(palette.fg, palette.none),
+    Type = syntax_entry(palette.light_green, palette.none),
+    Delimiter = syntax_entry(palette.white, palette.none),
+
     ColorColumn = syntax_entry(palette.none, palette.bg1),
     Conceal = syntax_entry(set_colour_based_on_ui_contrast(palette.bg5, palette.grey0), palette.none),
     CurSearch = { link = "IncSearch" },
@@ -307,7 +312,6 @@ highlights.generate_syntax = function(palette, options)
     Operator = syntax_entry(palette.orange, palette.none),
     Special = syntax_entry(palette.yellow, palette.none),
     SpecialChar = syntax_entry(palette.yellow, palette.none),
-    Type = syntax_entry(palette.yellow, palette.none),
     String = syntax_entry(palette.green, palette.none),
     Character = syntax_entry(palette.green, palette.none),
     Constant = syntax_entry(palette.aqua, palette.none),
@@ -318,7 +322,6 @@ highlights.generate_syntax = function(palette, options)
     SpecialComment = syntax_entry(palette.grey1, palette.none, comment_italics),
     Todo = syntax_entry(palette.bg0, palette.blue, { styles.bold }),
 
-    Delimiter = syntax_entry(palette.white, palette.none),
     Ignore = syntax_entry(palette.grey1, palette.none),
     Underlined = syntax_entry(palette.none, palette.none, { styles.underline }),
 
@@ -332,7 +335,6 @@ highlights.generate_syntax = function(palette, options)
     Aqua = syntax_entry(palette.aqua, palette.none),
     Blue = syntax_entry(palette.blue, palette.none),
     Purple = syntax_entry(palette.purple, palette.none),
-    Function = syntax_entry(palette.fg, palette.none),
 
     RedItalic = syntax_entry(palette.red, palette.none, optional_italics),
     OrangeItalic = syntax_entry(palette.orange, palette.none, optional_italics),
