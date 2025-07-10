@@ -40,7 +40,7 @@ local M = {}
 local background = {
   bg_dim = "#062625",
   bg0 = "#062625",
-  bg1 = "#062625",
+  bg1 = "#0b3335",
   bg2 = "#062625",
   bg3 = "#062625",
   bg4 = "#062625",
@@ -55,7 +55,8 @@ local background = {
 ---@type table<Backgrounds, PaletteBase>
 local base_palette = {
   fg = "#d0b892",
-  red = "#e67e80",
+  red = "#F92672",
+
   orange = "#e69875",
   yellow = "#dbbc7f",
   green = "#a7c080",

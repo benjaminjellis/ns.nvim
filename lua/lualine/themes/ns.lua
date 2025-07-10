@@ -1,7 +1,7 @@
 local palettes = require("ns.colours")
 local config = require("ns").config
 
-local palette = palettes.generate_palette(config, vim.o.background)
+local palette = palettes.generate_palette(config)
 
 if config.transparent_background_level == 2 then
   palette.bg1 = palette.none
