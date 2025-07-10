@@ -145,8 +145,6 @@ highlights.generate_syntax = function(palette, options)
     Decorator = syntax_entry(palette.light_green, palette.none, { styles.italic }),
     Derive = syntax_entry(palette.light_green, palette.none, { styles.bold }),
 
-
-
     ColorColumn = syntax_entry(palette.none, palette.bg1),
     Conceal = syntax_entry(set_colour_based_on_ui_contrast(palette.bg5, palette.grey0), palette.none),
     CurSearch = { link = "IncSearch" },
@@ -716,7 +714,7 @@ highlights.generate_syntax = function(palette, options)
     ["@lsp.type.builtinType"] = { link = "@type.builtin" },
     ["@lsp.type.class"] = { link = "@type" },
     ["@lsp.type.comment"] = { link = "@comment" },
-    ["@lsp.type.decorator"] = { link = "Decorator"},
+    ["@lsp.type.decorator"] = { link = "Decorator" },
     ["@lsp.type.derive"] = { link = "Derive" },
     ["@lsp.type.deriveHelper"] = { link = "@attribute" },
     ["@lsp.type.enum"] = { link = "@type" },
@@ -759,7 +757,7 @@ highlights.generate_syntax = function(palette, options)
     ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
     ["@lsp.typemod.method.readonly"] = { link = "@method" },
     ["@lsp.typemod.operator.injected"] = { link = "@operator" },
-    ["@lsp.typemod.string.injected"] = { link = "@string" },;
+    ["@lsp.typemod.string.injected"] = { link = "@string" },
     ["@lsp.typemod.type.defaultLibrary"] = { link = "Type" },
     ["@lsp.typemod.typeAlias.defaultLibrary"] = { link = "@type.builtin" },
     ["@lsp.typemod.variable.callable"] = { link = "@function" },
