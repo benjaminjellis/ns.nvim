@@ -100,6 +100,41 @@ highlights.generate_syntax = function(palette, options)
 
   ---@type Highlights
   local syntax = {
+    -- Predefined highlight groups
+    Fg = syntax_entry(palette.fg, palette.none),
+    Grey = syntax_entry(palette.grey1, palette.none),
+    Red = syntax_entry(palette.red, palette.none),
+    Orange = syntax_entry(palette.orange, palette.none),
+    Yellow = syntax_entry(palette.yellow, palette.none),
+    Green = syntax_entry(palette.green, palette.none),
+    Aqua = syntax_entry(palette.aqua, palette.none),
+    Blue = syntax_entry(palette.blue, palette.none),
+    Purple = syntax_entry(palette.purple, palette.none),
+
+    RedItalic = syntax_entry(palette.red, palette.none, optional_italics),
+    OrangeItalic = syntax_entry(palette.orange, palette.none, optional_italics),
+    YellowItalic = syntax_entry(palette.yellow, palette.none, optional_italics),
+    GreenItalic = syntax_entry(palette.green, palette.none, optional_italics),
+    AquaItalic = syntax_entry(palette.aqua, palette.none, optional_italics),
+    BlueItalic = syntax_entry(palette.blue, palette.none, optional_italics),
+    PurpleItalic = syntax_entry(palette.purple, palette.none, optional_italics),
+
+    RedBold = syntax_entry(palette.red, palette.none, { styles.bold }),
+    OrangeBold = syntax_entry(palette.orange, palette.none, { styles.bold }),
+    YellowBold = syntax_entry(palette.yellow, palette.none, { styles.bold }),
+    GreenBold = syntax_entry(palette.green, palette.none, { styles.bold }),
+    AquaBold = syntax_entry(palette.aqua, palette.none, { styles.bold }),
+    BlueBold = syntax_entry(palette.blue, palette.none, { styles.bold }),
+    PurpleBold = syntax_entry(palette.purple, palette.none, { styles.bold }),
+
+    RedSign = syntax_entry(palette.red, set_signs_background_colour(palette.bg1)),
+    OrangeSign = syntax_entry(palette.orange, set_signs_background_colour(palette.bg1)),
+    YellowSign = syntax_entry(palette.yellow, set_signs_background_colour(palette.bg1)),
+    GreenSign = syntax_entry(palette.green, set_signs_background_colour(palette.bg1)),
+    AquaSign = syntax_entry(palette.aqua, set_signs_background_colour(palette.bg1)),
+    BlueSign = syntax_entry(palette.blue, set_signs_background_colour(palette.bg1)),
+    PurpleSign = syntax_entry(palette.purple, set_signs_background_colour(palette.bg1)),
+
     -- Semantic Highlights
     Function = syntax_entry(palette.fg, palette.none),
     Type = syntax_entry(palette.light_green, palette.none),
@@ -316,7 +351,7 @@ highlights.generate_syntax = function(palette, options)
     Character = syntax_entry(palette.green, palette.none),
     Constant = syntax_entry(palette.aqua, palette.none),
     Macro = syntax_entry(palette.aqua, palette.none),
-    Identifier = syntax_entry(palette.blue, palette.none),
+    Identifier = { link = "Fg" },
 
     Comment = syntax_entry(palette.comment, palette.none, comment_italics),
     SpecialComment = syntax_entry(palette.grey1, palette.none, comment_italics),
@@ -324,41 +359,6 @@ highlights.generate_syntax = function(palette, options)
 
     Ignore = syntax_entry(palette.grey1, palette.none),
     Underlined = syntax_entry(palette.none, palette.none, { styles.underline }),
-
-    -- Predefined highlight groups
-    Fg = syntax_entry(palette.fg, palette.none),
-    Grey = syntax_entry(palette.grey1, palette.none),
-    Red = syntax_entry(palette.red, palette.none),
-    Orange = syntax_entry(palette.orange, palette.none),
-    Yellow = syntax_entry(palette.yellow, palette.none),
-    Green = syntax_entry(palette.green, palette.none),
-    Aqua = syntax_entry(palette.aqua, palette.none),
-    Blue = syntax_entry(palette.blue, palette.none),
-    Purple = syntax_entry(palette.purple, palette.none),
-
-    RedItalic = syntax_entry(palette.red, palette.none, optional_italics),
-    OrangeItalic = syntax_entry(palette.orange, palette.none, optional_italics),
-    YellowItalic = syntax_entry(palette.yellow, palette.none, optional_italics),
-    GreenItalic = syntax_entry(palette.green, palette.none, optional_italics),
-    AquaItalic = syntax_entry(palette.aqua, palette.none, optional_italics),
-    BlueItalic = syntax_entry(palette.blue, palette.none, optional_italics),
-    PurpleItalic = syntax_entry(palette.purple, palette.none, optional_italics),
-
-    RedBold = syntax_entry(palette.red, palette.none, { styles.bold }),
-    OrangeBold = syntax_entry(palette.orange, palette.none, { styles.bold }),
-    YellowBold = syntax_entry(palette.yellow, palette.none, { styles.bold }),
-    GreenBold = syntax_entry(palette.green, palette.none, { styles.bold }),
-    AquaBold = syntax_entry(palette.aqua, palette.none, { styles.bold }),
-    BlueBold = syntax_entry(palette.blue, palette.none, { styles.bold }),
-    PurpleBold = syntax_entry(palette.purple, palette.none, { styles.bold }),
-
-    RedSign = syntax_entry(palette.red, set_signs_background_colour(palette.bg1)),
-    OrangeSign = syntax_entry(palette.orange, set_signs_background_colour(palette.bg1)),
-    YellowSign = syntax_entry(palette.yellow, set_signs_background_colour(palette.bg1)),
-    GreenSign = syntax_entry(palette.green, set_signs_background_colour(palette.bg1)),
-    AquaSign = syntax_entry(palette.aqua, set_signs_background_colour(palette.bg1)),
-    BlueSign = syntax_entry(palette.blue, set_signs_background_colour(palette.bg1)),
-    PurpleSign = syntax_entry(palette.purple, set_signs_background_colour(palette.bg1)),
 
     Added = { link = "Green" },
     Removed = { link = "Red" },
@@ -1977,7 +1977,7 @@ highlights.generate_syntax = function(palette, options)
     -- JS/X
     javaScriptNull = { link = "Aqua" },
     javaScriptNumber = { link = "Number" },
-    javaScriptIdentifier = { link = "Orange" },
+    javaScriptIdentifier = { link = "Identifier" },
     javaScriptGlobal = { link = "Purple" },
     javaScriptMessage = { link = "Yellow" },
     javaScriptFunction = { link = "Keyword" },
@@ -2023,13 +2023,13 @@ highlights.generate_syntax = function(palette, options)
     goVarDefs = { link = "Aqua" },
     goDeclType = { link = "OrangeItalic" },
     goFunctionCall = { link = "Function" },
-    goPredefinedIdentifiers = { link = "Aqua" },
+    goPredefinedIdentifiers = { link = "Identifier" },
     goBuiltins = { link = "Function" },
     goVarArgs = { link = "Grey" },
 
     -- Rust
     rustStructure = { link = "Type" },
-    rustIdentifier = { link = "Purple" },
+    rustIdentifier = { link = "Identifier" },
     rustModPath = { link = "Orange" },
     rustModPathSep = { link = "Grey" },
     rustSelf = { link = "Type" },
