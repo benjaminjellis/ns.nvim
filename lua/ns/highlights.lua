@@ -300,7 +300,7 @@ highlights.generate_syntax = function(palette, options)
     Conditional = syntax_entry(palette.red, palette.none, optional_italics),
     Repeat = syntax_entry(palette.red, palette.none, optional_italics),
     Keyword = syntax_entry(palette.red, palette.none, optional_italics),
-    Typedef = syntax_entry(palette.red, palette.none, optional_italics),
+    Typedef = { link = "Type" },
     Exception = syntax_entry(palette.red, palette.none, optional_italics),
     Statement = syntax_entry(palette.red, palette.none, optional_italics),
 
@@ -499,7 +499,7 @@ highlights.generate_syntax = function(palette, options)
     TSTextReference = { link = "Constant" },
     TSTitle = { link = "Title" },
     TSTodo = { link = "Todo" },
-    TSType = { link = "YellowItalic" },
+    TSType = { link = "Type" },
     TSTypeBuiltin = { link = "YellowItalic" },
     TSTypeDefinition = { link = "YellowItalic" },
     TSTypeQualifier = { link = "Orange" },
