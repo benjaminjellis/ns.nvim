@@ -481,7 +481,7 @@ highlights.generate_syntax = function(palette, options)
     TSParameterReference = { link = "Fg" },
     TSPreProc = { link = "PreProc" },
     TSProperty = { link = "Blue" },
-    TSPunctBracket = { link = "Fg" },
+    TSPunctBracket = { link = "Delimiter" },
     TSPunctDelimiter = { link = "Grey" },
     TSPunctSpecial = { link = "Blue" },
     TSRepeat = { link = "Red" },
@@ -2028,11 +2028,11 @@ highlights.generate_syntax = function(palette, options)
     goVarArgs = { link = "Grey" },
 
     -- Rust
-    rustStructure = { link = "Orange" },
+    rustStructure = { link = "Type" },
     rustIdentifier = { link = "Purple" },
     rustModPath = { link = "Orange" },
     rustModPathSep = { link = "Grey" },
-    rustSelf = { link = "Blue" },
+    rustSelf = { link = "Type" },
     rustSuper = { link = "Blue" },
     rustDeriveTrait = { link = "PurpleItalic" },
     rustEnumVariant = { link = "Purple" },
