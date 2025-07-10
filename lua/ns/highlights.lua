@@ -707,6 +707,7 @@ highlights.generate_syntax = function(palette, options)
 
     -- LSP Semantic token highlights
     ["@lsp.type.boolean"] = { link = "@boolean" },
+    ["@lsp.typemod.struct.defaultLibrary"] = { link = "Type" },
     ["@lsp.type.builtinConstant"] = { link = "@constant.builtin" },
     ["@lsp.type.builtinType"] = { link = "@type.builtin" },
     ["@lsp.type.class"] = { link = "@type" },
