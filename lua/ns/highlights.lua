@@ -706,6 +706,7 @@ highlights.generate_syntax = function(palette, options)
     -- New Treesitter highlights (ust specific)
     ["@variable.parameter.rust"] = syntax_entry(palette.fg, palette.none, { styles.italic }),
     ["@lsp.mod.associated.rust"] = syntax_entry(palette.fg, palette.none, { styles.italic }),
+    ["@constant.rust"] = { link = "GreenItalic" },
 
     -- LSP Semantic token highlights
     ["@lsp.type.boolean"] = { link = "@boolean" },
