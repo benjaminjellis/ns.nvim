@@ -54,7 +54,7 @@ local background = {
 
 ---@type table<Backgrounds, PaletteBase>
 local base_palette = {
-  fg = "#d3c6aa",
+  fg = "#d0b892",
   red = "#e67e80",
   orange = "#e69875",
   yellow = "#dbbc7f",
@@ -65,9 +65,9 @@ local base_palette = {
   grey0 = "#7a8478",
   grey1 = "#859289",
   grey2 = "#9da9a0",
-  statusline1 = "#a7c080",
-  statusline2 = "#d3c6aa",
-  statusline3 = "#e67e80",
+  statusline1 = "#d3b58e",
+  statusline2 = "#A6E22E",
+  statusline3 = "#66D9EF",
   none = "NONE",
 }
 

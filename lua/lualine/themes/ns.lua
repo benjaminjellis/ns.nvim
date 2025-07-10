@@ -10,8 +10,8 @@ end
 return {
   normal = {
     a = { bg = palette.statusline1, fg = palette.bg0, gui = "bold" },
-    b = { bg = palette.bg3, fg = palette.grey2 },
-    c = { bg = palette.bg1, fg = palette.grey1 },
+    b = { bg = palette.bg3, fg = palette.fg },
+    c = { bg = palette.bg1, fg = palette.fg },
   },
   insert = {
     a = { bg = palette.statusline2, fg = palette.bg0, gui = "bold" },
