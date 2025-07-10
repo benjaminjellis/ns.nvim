@@ -59,17 +59,22 @@ local base_palette = {
   orange = "#FD971F",
   yellow = "#E6DB74",
   green = "#A6E22E",
-  -- not update
+  -- not updated
   aqua = "#83c092",
   blue = "#66D9EF",
   purple = "#AE81FF",
+  --new
+  cyan = "#A1EFE4",
 
-  -- not update
+  -- not updated
   grey0 = "#7a8478",
-  -- not update
+  -- not updated
   grey1 = "#859289",
-  -- not update
+  -- not updated
   grey2 = "#9da9a0",
+
+  -- new
+  comment = "#53d549",
 
   statusline1 = "#d3b58e",
   statusline2 = "#A6E22E",

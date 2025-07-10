@@ -242,10 +242,10 @@ highlights.generate_syntax = function(palette, options)
       palette.blue
     ),
     DiagnosticUnderlineHint = syntax_entry(
-      palette.green,
+      palette.cyan,
       options.diagnostic_text_highlight and palette.bg_green or palette.none,
       { styles.undercurl },
-      palette.green
+      palette.cyan
     ),
     DiagnosticSignError = { link = "RedSign" },
     DiagnosticSignWarn = { link = "YellowSign" },
@@ -315,7 +315,7 @@ highlights.generate_syntax = function(palette, options)
     Macro = syntax_entry(palette.aqua, palette.none),
     Identifier = syntax_entry(palette.blue, palette.none),
 
-    Comment = syntax_entry(palette.grey1, palette.none, comment_italics),
+    Comment = syntax_entry(palette.comment, palette.none, comment_italics),
     SpecialComment = syntax_entry(palette.grey1, palette.none, comment_italics),
     Todo = syntax_entry(palette.bg0, palette.blue, { styles.bold }),
 
@@ -2181,7 +2181,7 @@ highlights.generate_syntax = function(palette, options)
     Field = "Green",
     File = "Green",
     Folder = "Aqua",
-    Function = "Green",
+    Function = "Yellow",
     Interface = "Yellow",
     Key = "Red",
     Keyword = "Red",
