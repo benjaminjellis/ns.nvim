@@ -79,6 +79,12 @@ local base_palette = {
 
   -- new
   comment = "#53d549",
+  -- new
+  string = "#3ad0b5",
+  -- new
+  constant = "#87ffde",
+  -- number
+  number = "#87ffde",
 
   statusline1 = "#d3b58e",
   statusline2 = "#A6E22E",
