@@ -41,10 +41,11 @@ local background = {
   bg_dim = "#062625",
   bg0 = "#062625",
   bg1 = "#0b3335",
-  bg2 = "#062625",
-  bg3 = "#062625",
-  bg4 = "#062625",
-  bg5 = "#062625",
+  bg2 = "#0c3d40",
+  bg3 = "#0c494d",
+  bg4 = "#0c494d",
+  bg5 = "#0c494d",
+
   bg_visual = "#0000ff",
   bg_red = "#062625",
   bg_green = "#062625",
@@ -61,7 +62,6 @@ local base_palette = {
   --new
   light_green = "#8cde94",
   green = "#A6E22E",
-  -- not updated
   aqua = "#83c092",
   blue = "#66D9EF",
   purple = "#AE81FF",
@@ -78,7 +78,7 @@ local base_palette = {
   grey2 = "#9da9a0",
 
   -- new
-  comment = "#53d549",
+  comment = "#235e1e",
   -- new
   string = "#3ad0b5",
   -- new

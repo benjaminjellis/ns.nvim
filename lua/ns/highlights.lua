@@ -150,17 +150,17 @@ highlights.generate_syntax = function(palette, options)
     ColorColumn = syntax_entry(palette.none, palette.bg1),
     Conceal = syntax_entry(set_colour_based_on_ui_contrast(palette.bg5, palette.grey0), palette.none),
     CurSearch = { link = "IncSearch" },
-    Cursor = syntax_entry(palette.none, palette.none, { styles.reverse }),
+    Cursor = syntax_entry(palette.none, palette.bg1),
     lCursor = { link = "Cursor" },
     CursorIM = { link = "Cursor" },
     CursorColumn = syntax_entry(palette.none, palette.bg1),
-    CursorLine = syntax_entry(palette.none, palette.bg1),
+    CursorLinePicker = syntax_entry(palette.none, palette.bg1),
     Directory = syntax_entry(palette.green, palette.none),
-    DiffAdd = syntax_entry(palette.none, palette.bg_green),
-    DiffChange = syntax_entry(palette.none, palette.bg_blue),
-    DiffDelete = syntax_entry(palette.none, palette.bg_red),
+    DiffAdd = syntax_entry(palette.none, palette.bg1),
+    DiffChange = syntax_entry(palette.none, palette.blue),
+    DiffDelete = syntax_entry(palette.none, palette.red),
     DiffText = syntax_entry(palette.bg0, palette.blue),
-    EndOfBuffer = syntax_entry((options.show_eob and palette.bg4) or palette.bg0, palette.none),
+    EndOfBuffer = syntax_entry((options.show_eob and palette.bg3) or palette.bg0, palette.none),
     TermCursor = { link = "Cursor" },
     TermCursorNC = { link = "Cursor" },
     ErrorMsg = syntax_entry(palette.red, palette.none, { styles.bold }),
@@ -171,20 +171,18 @@ highlights.generate_syntax = function(palette, options)
       sign_column_respecting_colour(palette.bg1)
     ),
     SignColumn = syntax_entry(palette.fg, sign_column_respecting_colour(palette.bg1)),
-    IncSearch = syntax_entry(palette.bg0, palette.red),
+    IncSearch = syntax_entry(palette.bg0, palette.bg_visual),
     Substitute = syntax_entry(palette.bg0, palette.yellow),
-    LineNr = syntax_entry(set_colour_based_on_ui_contrast(palette.bg5, palette.grey0), palette.none),
-    LineNrAbove = syntax_entry(set_colour_based_on_ui_contrast(palette.bg5, palette.grey0), palette.none),
-    LineNrBelow = syntax_entry(set_colour_based_on_ui_contrast(palette.bg5, palette.grey0), palette.none),
-    CursorLineNr = syntax_entry(
-      set_colour_based_on_ui_contrast(palette.grey1, palette.grey2),
-      sign_column_respecting_colour(palette.bg1)
-    ),
+    LineNr = syntax_entry(palette.bg1, palette.none),
+    LineNrAbove = syntax_entry(palette.bg3, palette.none),
+    LineNrBelow = syntax_entry(palette.bg3, palette.none),
+    CursorLineNr = syntax_entry(palette.fg, palette.none),
     MatchParen = syntax_entry(palette.none, palette.bg4),
     ModeMsg = syntax_entry(palette.fg, palette.none, { styles.bold }),
     MoreMsg = syntax_entry(palette.yellow, palette.none, { styles.bold }),
-    NonText = syntax_entry(palette.bg4, palette.none),
+    NonText = syntax_entry(palette.bg3, palette.none),
     Normal = syntax_entry(palette.fg, transparency_respecting_colour(palette.bg0)),
+    CursorLine = { link = "Cursor" },
     NormalFloat = syntax_entry(palette.fg, (options.float_style == "bright" and palette.bg2) or palette.bg_dim),
     FloatBorder = syntax_entry(palette.grey1, (options.float_style == "bright" and palette.bg2) or palette.bg_dim),
     FloatTitle = syntax_entry(
@@ -219,7 +217,7 @@ highlights.generate_syntax = function(palette, options)
       options.transparent_background_level == 2 and palette.none or palette.bg1
     ),
     TabLineSel = syntax_entry(palette.bg0, palette.statusline1),
-    Title = syntax_entry(palette.orange, palette.none, { styles.bold }),
+    Title = syntax_entry(palette.fg, palette.none, { styles.bold }),
     Visual = syntax_entry(palette.none, palette.bg_visual),
     VisualNOS = syntax_entry(palette.none, palette.bg_visual),
     WarningMsg = syntax_entry(palette.yellow, palette.none, { styles.bold }),
@@ -289,10 +287,10 @@ highlights.generate_syntax = function(palette, options)
       palette.blue
     ),
     DiagnosticUnderlineHint = syntax_entry(
-      palette.cyan,
+      palette.yellow,
       options.diagnostic_text_highlight and palette.bg_green or palette.none,
       { styles.undercurl },
-      palette.cyan
+      palette.yellow
     ),
     DiagnosticSignError = { link = "RedSign" },
     DiagnosticSignWarn = { link = "YellowSign" },
@@ -409,7 +407,7 @@ highlights.generate_syntax = function(palette, options)
     ErrorFloat = syntax_entry(palette.red, palette.none),
     WarningFloat = syntax_entry(palette.yellow, palette.none),
     InfoFloat = syntax_entry(palette.blue, palette.none),
-    HintFloat = syntax_entry(palette.green, palette.none),
+    HintFloat = syntax_entry(palette.yellow, palette.none),
     CurrentWord = syntax_entry(palette.none, palette.bg_green),
 
     -- Git commit colours
@@ -450,7 +448,7 @@ highlights.generate_syntax = function(palette, options)
     TSComment = { link = "Comment" },
     TSConditional = { link = "Fg" },
     TSConstBuiltin = { link = "Constant" },
-    TSConstMacro = { link = "PurpleItalic" },
+    TSConstMacro = { link = "Orange" },
     TSConstant = { link = "Constant" },
     TSConstructor = { link = "Yellow" },
     TSDebug = { link = "Debug" },
@@ -460,7 +458,7 @@ highlights.generate_syntax = function(palette, options)
     TSError = { link = "Error" },
     TSException = { link = "Red" },
     TSField = { link = "Identifier" },
-    TSFloat = { link = "Purple" },
+    TSFloat = { link = "Number" },
     TSFuncBuiltin = { link = "Type" },
     TSFuncMacro = { link = "Fg" },
     TSFunction = { link = "Function" },
@@ -595,7 +593,6 @@ highlights.generate_syntax = function(palette, options)
     ["@keyword.import.typescript"] = { link = "typescriptTSInclude" },
     ["@keyword.modifier"] = { link = "TSTypeQualifier" },
     ["@keyword.operator"] = { link = "TSKeywordOperator" },
-    ["@keyword.repeat"] = { link = "TSRepeat" },
     ["@keyword.return"] = { link = "TSKeywordReturn" },
     ["@keyword.storage"] = { link = "TSStorageClass" },
     ["@label"] = { link = "TSLabel" },
@@ -754,7 +751,7 @@ highlights.generate_syntax = function(palette, options)
     ["@lsp.typemod.function.readonly"] = { link = "@method" },
     ["@lsp.typemod.keyword.async"] = { link = "@keyword" },
     ["@lsp.typemod.keyword.injected"] = { link = "@keyword" },
-    ["@lsp.typemod.macro.defaultLibrary"] = { link = "@function.builtin" },
+    ["@lsp.typemod.macro.defaultLibrary"] = { link = "@lsp.typemod.macro" },
     ["@lsp.typemod.method.defaultLibrary"] = { link = "@function.builtin" },
     ["@lsp.typemod.method.readonly"] = { link = "@method" },
     ["@lsp.typemod.operator.injected"] = { link = "@operator" },
@@ -1146,7 +1143,7 @@ highlights.generate_syntax = function(palette, options)
     -- folke/which-key.nvim
     WhichKey = { link = "Red" },
     WhichKeyDesc = { link = "Blue" },
-    WhichKeyFloat = syntax_entry(palette.none, palette.bg1),
+    WhichKeyFloat = syntax_entry(palette.none, palette.bg0),
     WhichKeyGroup = { link = "Yellow" },
     WhichKeySeparator = { link = "Green" },
     WhichKeyValue = syntax_entry(palette.fg, palette.none),
@@ -1210,7 +1207,7 @@ highlights.generate_syntax = function(palette, options)
     SnacksPickerTitle = { link = "Title" },
     SnacksPickerFooter = { link = "SnacksPickerTitle" },
     SnacksPickerPrompt = { link = "Orange" },
-    SnacksPickerInputCursorLine = { link = "Normal" },
+    SnacksPickerInputCursorLine = { link = "CursorLinePicker" },
     SnacksPickerListCursorLine = { link = "DiffAdd" },
     SnacksPickerMatch = syntax_entry(palette.green, palette.none, { styles.bold }),
     SnacksPickerToggle = { link = "CursorLine" },
@@ -1248,8 +1245,8 @@ highlights.generate_syntax = function(palette, options)
     LeapBackdrop = syntax_entry(palette.grey1, palette.none),
 
     -- lukas-reineke/indent-blankline.nvim
-    IblScope = syntax_entry(palette.grey1, palette.none, { styles.nocombine }),
-    IblIndent = syntax_entry(palette.bg4, palette.none, { styles.nocombine }),
+    IblScope = syntax_entry(palette.bg1, palette.none, { styles.nocombine }),
+    IblIndent = syntax_entry(palette.bg1, palette.none, { styles.nocombine }),
     IndentBlanklineContextChar = { link = "IblScope" },
     IndentBlanklineChar = { link = "IblIndent" },
     IndentBlanklineSpaceChar = { link = "IndentBlanklineChar" },
@@ -1753,8 +1750,8 @@ highlights.generate_syntax = function(palette, options)
     NeogitUntrackedfiles = { link = "PurpleItalic" },
 
     -- glepnir/dashboard-nvim
-    DashboardHeader = { link = "Yellow" },
-    DashboardCenter = { link = "Green" },
+    DashboardHeader = { link = "Fg" },
+    DashboardCenter = { link = "White" },
     DashboardShortcut = { link = "Red" },
     DashboardFooter = { link = "Orange" },
 
@@ -1807,15 +1804,16 @@ highlights.generate_syntax = function(palette, options)
     YankyYanked = { link = "IncSearch" },
 
     -- folke/noice.nvim
+    NoiceCmdline = syntax_entry(palette.aqua, palette.none),
     NoiceCompletionItemKindDefault = syntax_entry(palette.grey1, palette.none),
     NoiceCompletionItemKindKeyword = syntax_entry(palette.aqua, palette.none),
     NoiceCompletionItemKindVariable = syntax_entry(palette.statusline3, palette.none),
     NoiceCompletionItemKindConstant = syntax_entry(palette.statusline3, palette.none),
     NoiceCompletionItemKindReference = syntax_entry(palette.statusline3, palette.none),
     NoiceCompletionItemKindValue = syntax_entry(palette.statusline3, palette.none),
-    NoiceCompletionItemKindFunction = syntax_entry(palette.blue, palette.none),
-    NoiceCompletionItemKindMethod = syntax_entry(palette.blue, palette.none),
-    NoiceCompletionItemKindConstructor = syntax_entry(palette.blue, palette.none),
+    NoiceCompletionItemKindFunction = syntax_entry(palette.aqua, palette.none),
+    NoiceCompletionItemKindMethod = syntax_entry(palette.aqua, palette.none),
+    NoiceCompletionItemKindConstructor = syntax_entry(palette.aqua, palette.none),
     NoiceCompletionItemKindClass = syntax_entry(palette.orange, palette.none),
     NoiceCompletionItemKindInterface = syntax_entry(palette.orange, palette.none),
     NoiceCompletionItemKindStruct = syntax_entry(palette.orange, palette.none),
@@ -2168,7 +2166,7 @@ highlights.generate_syntax = function(palette, options)
   end
 
   if options.inlay_hints_background == "none" then
-    syntax["InlayHints"] = { link = "LineNr" }
+    syntax["InlayHints"] = syntax_entry(palette.bg3, palette.none)
   elseif options.inlay_hints_background == "dimmed" then
     syntax["InlayHints"] = syntax_entry(palette.grey1, palette.bg_dim)
   end
