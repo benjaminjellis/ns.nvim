@@ -68,7 +68,7 @@ local base_palette = {
   --new
   cyan = "#A1EFE4",
   --new
-  white = "#ffffff",
+  white = "#d3c6aa",
 
   -- not updated
   grey0 = "#7a8478",
