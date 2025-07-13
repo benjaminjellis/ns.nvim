@@ -78,7 +78,7 @@ local base_palette = {
   grey2 = "#9da9a0",
 
   -- new
-  comment = "#235e1e",
+  comment = "#53d549",
   -- new
   string = "#3ad0b5",
   -- new
