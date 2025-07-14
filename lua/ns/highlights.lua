@@ -107,6 +107,7 @@ highlights.generate_syntax = function(palette, options)
     Orange = syntax_entry(palette.orange, palette.none),
     Yellow = syntax_entry(palette.yellow, palette.none),
     Green = syntax_entry(palette.green, palette.none),
+    LightGreen = syntax_entry(palette.light_green, palette.none),
     Aqua = syntax_entry(palette.aqua, palette.none),
     Blue = syntax_entry(palette.blue, palette.none),
     Purple = syntax_entry(palette.purple, palette.none),
@@ -180,7 +181,7 @@ highlights.generate_syntax = function(palette, options)
     MatchParen = syntax_entry(palette.none, palette.bg4),
     ModeMsg = syntax_entry(palette.fg, palette.none, { styles.bold }),
     MoreMsg = syntax_entry(palette.yellow, palette.none, { styles.bold }),
-    NonText = syntax_entry(palette.bg3, palette.none),
+    NonText = syntax_entry(palette.bg5, palette.none),
     Normal = syntax_entry(palette.fg, transparency_respecting_colour(palette.bg0)),
     CursorLine = { link = "Cursor" },
     NormalFloat = syntax_entry(palette.fg, (options.float_style == "bright" and palette.bg2) or palette.bg_dim),
@@ -1141,11 +1142,11 @@ highlights.generate_syntax = function(palette, options)
     BufTabLineFill = { link = "TabLineFill" },
 
     -- folke/which-key.nvim
-    WhichKey = { link = "Red" },
-    WhichKeyDesc = { link = "Blue" },
+    WhichKey = { link = "Orange" },
+    WhichKeyDesc = { link = "White" },
     WhichKeyFloat = syntax_entry(palette.none, palette.bg0),
     WhichKeyGroup = { link = "Yellow" },
-    WhichKeySeparator = { link = "Green" },
+    WhichKeySeparator = { link = "LightGreen" },
     WhichKeyValue = syntax_entry(palette.fg, palette.none),
 
     -- unblevable/quick-scope
