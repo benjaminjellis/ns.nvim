@@ -64,7 +64,7 @@ local base_palette = {
   green = "#A6E22E",
   aqua = "#83c092",
   blue = "#66D9EF",
-  purple = "#AE81FF",
+  purple = "#ae81ff",
   --new
   cyan = "#A1EFE4",
   --new

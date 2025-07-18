@@ -358,7 +358,7 @@ highlights.generate_syntax = function(palette, options)
 
     Comment = syntax_entry(palette.comment, palette.none, comment_italics),
     SpecialComment = syntax_entry(palette.grey1, palette.none, comment_italics),
-    Todo = syntax_entry(palette.bg0, palette.blue, { styles.bold }),
+    Todo = syntax_entry(palette.bg0, palette.purple, { styles.bold }),
 
     Ignore = syntax_entry(palette.grey1, palette.none),
     Underlined = syntax_entry(palette.none, palette.none, { styles.underline }),
