@@ -538,6 +538,10 @@ highlights.generate_syntax = function(palette, options)
     tomlTSProperty = { link = "tomlKey" },
     tomlTSString = { link = "tomlString" },
 
+    -- Todo
+    TodoFgTODO = { link = "Purple" },
+    TodoBgTODO = { link = "Todo" },
+
     -- New Treesitter highlights
     ["@annotation"] = { link = "TSAnnotation" },
     ["@attribute"] = { link = "TSAttribute" },
