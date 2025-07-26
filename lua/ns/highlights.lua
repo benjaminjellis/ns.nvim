@@ -540,6 +540,7 @@ highlights.generate_syntax = function(palette, options)
 
     -- Todo
     TodoFgTODO = { link = "Purple" },
+    TodoSignTODO = { link = "Purple" },
     TodoBgTODO = { link = "Todo" },
 
     -- New Treesitter highlights
