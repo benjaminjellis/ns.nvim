@@ -516,7 +516,7 @@ highlights.generate_syntax = function(palette, options)
     luaTSConstructor = { link = "luaBraces" },
     goTSInclude = { link = "Purple" },
     goTSNamespace = { link = "Fg" },
-    goTSConstBuiltin = { link = "AquaItalic" },
+    goTSConstBuiltin = { link = "Constant" },
     htmlTSText = { link = "TSNone" },
     jsonKeyword = { link = "Green" },
     jsonString = { link = "Fg" },
@@ -763,6 +763,7 @@ highlights.generate_syntax = function(palette, options)
     ["@lsp.typemod.operator.injected"] = { link = "@operator" },
     ["@lsp.typemod.string.injected"] = { link = "@string" },
     ["@lsp.typemod.type.defaultLibrary"] = { link = "Type" },
+    ["@lsp.typemod.type.defaultLibrary.go"] = { link = "Orange" },
     ["@lsp.typemod.typeAlias.defaultLibrary"] = { link = "@type.builtin" },
     ["@lsp.typemod.variable.callable"] = { link = "@function" },
     ["@lsp.typemod.variable.constant.rust"] = { link = "@constant" },
@@ -1221,6 +1222,7 @@ highlights.generate_syntax = function(palette, options)
     SnacksPickerBufFlags = { link = "Grey" },
     SnacksPickerSelected = { link = "Aqua" },
     SnacksPickerKeymapRhs = { link = "Grey" },
+    SnacksPickerGitStatusUntracked = { link = "Grey" },
     -- }}}
 
     -- lewis6991/gitsigns.nvim
