@@ -138,7 +138,7 @@ highlights.generate_syntax = function(palette, options)
     PurpleSign = syntax_entry(palette.purple, set_signs_background_colour(palette.bg1)),
 
     -- Semantic Highlights
-    Function = syntax_entry(palette.fg, palette.none),
+    Function = syntax_entry(palette.yellow, palette.none),
     Type = syntax_entry(palette.light_green, palette.none),
     Delimiter = { link = "White" },
     Keyword = { link = "White" },
@@ -157,10 +157,10 @@ highlights.generate_syntax = function(palette, options)
     CursorColumn = syntax_entry(palette.none, palette.bg1),
     CursorLinePicker = syntax_entry(palette.none, palette.bg1),
     Directory = syntax_entry(palette.green, palette.none),
-    DiffAdd = syntax_entry(palette.none, palette.bg1),
-    DiffChange = syntax_entry(palette.none, palette.blue),
-    DiffDelete = syntax_entry(palette.none, palette.red),
-    DiffText = syntax_entry(palette.bg0, palette.blue),
+    DiffAdd = syntax_entry(palette.none, palette.bg_green),
+    DiffChange = syntax_entry(palette.none, palette.bg_blue),
+    DiffDelete = syntax_entry(palette.none, palette.bg_red),
+    DiffText = syntax_entry(palette.none, palette.bg3, { styles.bold }),
     EndOfBuffer = syntax_entry((options.show_eob and palette.bg3) or palette.bg0, palette.none),
     TermCursor = { link = "Cursor" },
     TermCursorNC = { link = "Cursor" },
@@ -356,7 +356,7 @@ highlights.generate_syntax = function(palette, options)
     Macro = syntax_entry(palette.aqua, palette.none),
     Identifier = { link = "Fg" },
 
-    Comment = syntax_entry(palette.comment, palette.none, comment_italics),
+    Comment = syntax_entry(palette.grey1, palette.none, comment_italics),
     SpecialComment = syntax_entry(palette.grey1, palette.none, comment_italics),
     Todo = syntax_entry(palette.bg0, palette.purple, { styles.bold }),
 
@@ -516,7 +516,7 @@ highlights.generate_syntax = function(palette, options)
     luaTSConstructor = { link = "luaBraces" },
     goTSInclude = { link = "Purple" },
     goTSNamespace = { link = "Fg" },
-    goTSConstBuiltin = { link = "AquaItalic" },
+    goTSConstBuiltin = { link = "Constant" },
     htmlTSText = { link = "TSNone" },
     jsonKeyword = { link = "Green" },
     jsonString = { link = "Fg" },
@@ -764,6 +764,7 @@ highlights.generate_syntax = function(palette, options)
     ["@lsp.typemod.operator.injected"] = { link = "@operator" },
     ["@lsp.typemod.string.injected"] = { link = "@string" },
     ["@lsp.typemod.type.defaultLibrary"] = { link = "Type" },
+    ["@lsp.typemod.type.defaultLibrary.go"] = { link = "Orange" },
     ["@lsp.typemod.typeAlias.defaultLibrary"] = { link = "@type.builtin" },
     ["@lsp.typemod.variable.callable"] = { link = "@function" },
     ["@lsp.typemod.variable.constant.rust"] = { link = "@constant" },
@@ -774,6 +775,7 @@ highlights.generate_syntax = function(palette, options)
     ["@lsp.typemod.variable.defaultLibrary.typescript"] = { link = "@constant.builtin" },
     ["@lsp.typemod.variable.defaultLibrary.typescriptreact"] = { link = "@constant.builtin" },
     ["@lsp.typemod.variable.injected"] = { link = "@variable" },
+    ["@lsp.typemod.variable.signature.go"] = { link = "Function" },
     ["@lsp.typemod.variable.static"] = { link = "Red" },
 
     -- p00f/ts-rainbow
@@ -1222,6 +1224,7 @@ highlights.generate_syntax = function(palette, options)
     SnacksPickerBufFlags = { link = "Grey" },
     SnacksPickerSelected = { link = "Aqua" },
     SnacksPickerKeymapRhs = { link = "Grey" },
+    SnacksPickerGitStatusUntracked = { link = "Grey" },
     -- }}}
 
     -- lewis6991/gitsigns.nvim

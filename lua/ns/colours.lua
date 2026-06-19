@@ -10,7 +10,7 @@ local M = {}
 ---@field bg5 string
 ---@field bg_visual string
 ---@field bg_red string
----@field bg_green string
+---@field bg_greenbg_green string
 ---@field bg_blue string
 ---@field bg_yellow string
 
@@ -47,9 +47,9 @@ local background = {
   bg5 = "#0c494d",
 
   bg_visual = "#0000ff",
-  bg_red = "#062625",
-  bg_green = "#062625",
-  bg_blue = "#062625",
+  bg_red = "#3d242e",
+  bg_green = "#0b3542",
+  bg_blue = "#163b42",
   bg_yellow = "#062625",
 }
 
