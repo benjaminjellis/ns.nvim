@@ -588,6 +588,7 @@ highlights.generate_syntax = function(palette, options)
     ["@include.typescript"] = { link = "typescriptTSInclude" },
     ["@keyword"] = { link = "TSKeyword" },
     ["@keyword.conditional"] = { link = "TSConditional" },
+    ["@keyword.conditional.python"] = { link = "TSConditional" },
     ["@keyword.debug"] = { link = "TSDebug" },
     ["@keyword.directive"] = { link = "TSPreProc" },
     ["@keyword.directive.define"] = { link = "TSDefine" },
